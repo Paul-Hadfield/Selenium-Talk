@@ -3,11 +3,11 @@ using Xunit;
 
 namespace Example7
 {
-    public class GoogleHome : IClassFixture<GoogleHomeFixture>
+    public class GoogleHomeTests : IClassFixture<GoogleHomeFixture>
     {
         private readonly GoogleHomeFixture testFixture;
 
-        public GoogleHome(GoogleHomeFixture testFixture)
+        public GoogleHomeTests(GoogleHomeFixture testFixture)
         {
             this.testFixture = ReturnParameter.OrThrowIfNull(testFixture, nameof(testFixture));
         }

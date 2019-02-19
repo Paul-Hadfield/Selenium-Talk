@@ -2,11 +2,11 @@ using Xunit;
 
 namespace Example7
 {
-    public class SelectResult : IClassFixture<SelectResultFixture>
+    public class SelectResultTests : IClassFixture<SelectResultFixture>
     {
         private readonly SelectResultFixture testFixture;
 
-        public SelectResult(SelectResultFixture testFixture)
+        public SelectResultTests(SelectResultFixture testFixture)
         {
             this.testFixture = testFixture;
         }

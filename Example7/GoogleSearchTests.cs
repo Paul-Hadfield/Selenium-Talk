@@ -3,11 +3,11 @@ using Xunit;
 
 namespace Example7
 {
-    public class GoogleSearch : IClassFixture<GoogleSearchFixture>
+    public class GoogleSearchTests : IClassFixture<GoogleSearchFixture>
     {
         private readonly GoogleSearchFixture testFixture;
 
-        public GoogleSearch(GoogleSearchFixture testFixture)
+        public GoogleSearchTests(GoogleSearchFixture testFixture)
         {
             this.testFixture = testFixture;
         }
