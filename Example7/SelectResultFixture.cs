@@ -6,10 +6,10 @@ namespace Example7
     {
         public SelectResultFixture()
         {
-            this.Page = new WikipediaPageObject(GoogleHomePageObject
+            this.Page = GoogleHomePageObject
                 .Load(this.driver)
                 .Search("Cheese")
-                .SelectLink("Cheese - Wikipedia"));    
+                .WikipediaResult("Cheese - Wikipedia");    
         }
         
         public WikipediaPageObject Page { get; }

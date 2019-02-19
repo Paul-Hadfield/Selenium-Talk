@@ -21,12 +21,12 @@ namespace Example7.PageObjects
             get { return ManagedGet(() => driver.FindElement(By.Id("hdtb-msb-vis")).FindElement(By.XPath("div[contains(text(), 'All')]")).GetAttribute("aria-selected")); }
         }
 
-        public IWebDriver SelectLink(string linkText)
+        public WikipediaPageObject WikipediaResult(string linkText)
         {
             try
             {
                 this.driver.FindElement(By.XPath($"//h3[contains(text(), '{linkText}')]")).Click();
-                return this.driver;
+                return new WikipediaPageObject(this.driver);
             }
             finally
             {
